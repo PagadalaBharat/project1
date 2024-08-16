@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: "Exo 2", sans-serif;
+      }
+      header {
+        display: flex;
+        justify-content: space-around;
+        background-color: white;
+        height: 3em;
+        align-items: center;
+        position: sticky;
+        top: 0px;
+        z-index: 4;
+      }
+      .nav a {
+        padding-left: 2em;
+        text-decoration: none;
+        color: #7a828e;
+        font-weight: 600;
+        letter-spacing: 0.2em;
+      }
+      header div span {
+        color: blue;
+      }
+      header div {
+        letter-spacing: 0.3em;
+        font-weight: 600;
+        color: navy;
+      }
+      .section1 {
+        background-image: url("home-bg.jpg");
+        width: 100%;
+        height: 95vh;
+        background-size: cover;
+        position: relative;
+      }
+      .bgcolor {
+        position: absolute;
+        top: 0;
+        /* background-color: rgba(1, 1, 249,0.5); */
+        background: rgb(238, 174, 202);
+        background: linear-gradient(
+          77deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(196, 96, 231, 0.7) 0%,
+          rgba(0, 81, 255, 0.7) 97%
+        );
+        width: 100%;
+        height: 95vh;
+      }
+      .phone {
+        position: absolute;
+        display: flex;
+        /* justify-content: center ; */
+        /* align-content: center ; */
+      }
+      .phone img {
+        position: absolute;
+        top: 35vh;
+        left: 15vw;
+        width: 500px;
+      }
+
+      .appstarter {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        bottom: -60vh;
+        right: -80vw;
+        left: 800px;
+        z-index: 3;
+
+        gap: 20px;
+      }
+      .appstarter button {
+        background-color: #1dc9e3;
+        border: none;
+        border-radius: 40px;
+        color: white;
+        font-weight: 700;
+      }
+      .appstarter button:hover,
+      .section3 button:hover {
+        background-color: aliceblue;
+        color: black;
+      }
+      .pricingbox button:hover {
+        background-color: #69a1f6;
+      }
+      .input button:hover {
+        background-color: #3b3e7c;
+        color: white;
+      }
+      .heading {
+        font-size: 30px;
+        color: white;
+        letter-spacing: 0.3em;
+      }
+      .para {
+        color: rgba(255, 255, 255, 0.5);
+      }
+      .section2 {
+        background-color: black;
+        width: 100%;
+        height: 60vh;
+      }
+      .section2 span {
+        color: white;
+        font-size: 2em;
+      }
+      .Welcome {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+      }
+      .main img {
+        width: 13em;
+      }
+      .main {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+      .main1,
+      .main2,
+      .main3 {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+      }
+      .maincontainer {
+        /* background-color: #1dc9e3; */
+        width: 30%;
+      }
+      .main1 {
+        font-size: 30px;
+      }
+      .main2 {
+        color: #3b3e7c;
+        font-weight: 700;
+      }
+      .main3 {
+        font-size: 15px;
+        /* display: flex;
+            flex-direction: row; */
+      }
+      .mainimg1 {
+        background-image: url("team-img1.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 14%;
+      }
+      .mainimg1 span {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+        font-size: 20px;
+        display: block;
+        padding: 5px;
+        padding-left: 30px;
+        /* margin-bottom: ; */
+      }
+      .mainimg2 {
+        background-image: url("team-img2.jpg");
+        background-position: center;
+        background-size: cover;
+        width: 14%;
+      }
+      .mainimg2 span {
+        background-color: rgba(255, 255, 255, 0.5);
+        color: black;
+        font-size: 20px;
+        display: block;
+        padding: 5px;
+        padding-left: 30px;
+        /* margin-bottom: ; */
+      }
+      .section3 {
+        /* background-color: #1dc9e3; */
+        background: rgb(238, 174, 202);
+        background: linear-gradient(
+          77deg,
+          rgba(238, 174, 202, 1) 0%,
+          rgba(231, 96, 96, 1) 0%,
+          rgba(0, 81, 255, 1) 97%
+        );
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .section3 p {
+        color: white;
+        font-size: 25px;
+        width: 60%;
+      }
+      .section3 button {
+        background-color: black;
+        color: white;
+        padding: 20px;
+        width: 200px;
+        border-radius: 30px;
+        font-size: 15px;
+      }
+      .section4 {
+        background-color: black;
+        /* width: 100vw; */
+        height: 100vh;
+      }
+      .section5 {
+        /* background-color: #E1AFD1; */
+        background: rgb(63, 94, 251);
+        background: radial-gradient(
+          circle,
+          rgba(63, 94, 251, 0.5) 50%,
+          rgba(252, 70, 134, 1) 100%
+        );
+        height: 70vh;
+      }
+      .pricingbox {
+        background-color: white;
+        height: 18em;
+        width: 15em;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center;
+        align-items: center; */
+        gap: 10px;
+        position: relative;
+      }
+      .uses {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+      }
+      .price {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        color: #1dc9e3;
+        font-weight: 900;
+        font-size: 30px;
+      }
+      .pricingbox button {
+        width: 60%;
+        height: 20%;
+        background-color: #1dc9e3;
+        border: none;
+        border-radius: 40px;
+        padding: 5px;
+        position: absolute;
+        bottom: -25px;
+        left: 50px;
+        color: white;
+        letter-spacing: 0.1em;
+      }
+      .mainpricingbox {
+        height: 55vh;
+        /* background-color: aqua; */
+        display: flex;
+        column-gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      .pricing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* background-color: bisque; */
+        height: 10vh;
+        color: white;
+      }
+      #pricingheading {
+        letter-spacing: 0.3em;
+        font-size: 1.3em;
+        font-weight: 800;
+      }
+      .section6 {
+        background-image: url("newsletter-bg.jpg");
+        height: 50vh;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+        row-gap: 40px;
+      }
+      .section6 .bgcolor6 {
+        /* background-color: rgba(12, 223, 255, 0.5); */
+        background: rgb(238, 174, 202);
+        background: linear-gradient(
+          77deg,
+          rgba(238, 174, 202, 0.5) 0%,
+          rgba(203, 96, 231, 0.5) 0%,
+          rgba(0, 81, 255, 1) 97%
+        );
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+      #subscribe {
+        font-size: 2em;
+      }
+      .text {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        row-gap: 30px;
+        justify-content: center;
+        align-items: center;
+      }
+      #para {
+        width: 80%;
+      }
+      .input input {
+        height: 40px;
+        width: 90%;
+        /* border: none; */
+        outline: none;
+        background-color: none;
+        background-color: rgba(12, 223, 255, 0);
+        border: none;
+        border-bottom: 2px solid white;
+      }
+      input::placeholder {
+        color: white;
+        font-size: 15px;
+        padding-left: 20px;
+      }
+      .input button {
+        width: 200px;
+        height: 50px;
+        background-color: white;
+        border: none;
+        border-radius: 50px;
+        color: #1dc9e3;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 10px;
+      }
+      .input {
+        display: flex;
+        column-gap: 50px;
+        /* background-color: aquamarine; */
+        width: 70%;
+      }
+      .footer {
+        width: 100%;
+        height: 90px;
+        background-color: black;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .footer span {
+        color: white;
+      }
+      .fa-brands {
+        /* background-color: #ffffff; */
+        color: white;
+      }
+      .logos i {
+        padding-left: 20px;
+      }
+      .ssimg img {
+        width: 270px;
+        height: 370px;
+        padding-left: 20px;
+      }
+      .section4 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+      }
+      .ssimg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+      }
+      .screenshots2 {
+        display: none;
+      }
+      .screenshots {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      .sssimg img {
+        width: 33%;
+
+        height: 500px;
+      }
+
+      .carousel {
+        margin: 20%;
+      }
+      .mobile {
+        display: none;
+      }
+      header span .fa-solid {
+        display: none;
+      }
+
+      @media screen and (width<576px) {
+        header div {
+          margin-left: 25%;
+          font-size: 14px;
+        }
+        nav a {
+          display: none;
+        }
+
+        .section1 {
+          position: relative;
+          width: 100%;
+          background-size: cover;
+        }
+        .phone img {
+          position: absolute;
+          top: 0;
+          margin-top: 50px;
+          margin-left: 30px;
+          left: 90;
+          display: flex;
+
+          width: 60vw;
+        }
+        .appstarter {
+          position: absolute;
+          top: 300px;
+          margin-left: 50px;
+          left: 0;
+          display: flex;
+          justify-items: center;
+          align-items: center;
+
+          height: 50vh;
+
+          /* background-color: #3b3e7c; */
+        }
+        .appstarter .heading {
+          /* background-color: #1dc9e3; */
+          margin-top: 100px;
+        }
+
+        .Welcome {
+          font-size: 12px;
+        }
+        .main {
+          height: 20vh;
+          width: 90vh;
+          margin-left: -20px;
+        }
+        .main1,
+        .main2,
+        .main3 {
+          font-size: 80%;
+        }
+        .mainimg1 {
+          width: 20%;
+        }
+        .mainimg1 span {
+          color: #3b3e7c;
+          font-weight: 400;
+          padding-left: 0px !important;
+        }
+        .mainimg2 span {
+          color: #3b3e7c;
+          font-weight: 400;
+          padding-left: 0px !important;
+          font-size: 18px;
+          height: 35px;
+        }
+        .mainimg2 {
+          width: 20%;
+        }
+        .section3 p {
+          width: 90%;
+          font-size: 18px;
+        }
+
+        .section4 .sssimg {
+          width: 100%;
+          /* background-color: #1dc9e3; */
+          margin-right: 0px;
+          height: 300px;
+        }
+        .carousel {
+          margin: 20%;
+          width: 80%;
+        }
+        .sssimg2 {
+          display: none;
+        }
+        .sssimg img {
+          display: none;
+        }
+        #carouselExampleIndicators {
+          display: none;
+        }
+        .screenshots2 {
+          color: white;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+        }
+        .screenshots2 img {
+          width: 150px;
+        }
+        .appheading {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .appheading p {
+          width: 90%;
+        }
+        header span .fa-solid {
+        display: block;
+      }
+
+        /* .section4 .sssimg img {
+          width: 120px;
+          height: auto;
+          margin: 20px 10px;
+        } */
+        .screenshots h1 {
+          margin-bottom: 20px;
+        }
+        .screenshots p {
+          width: 100%;
+        }
+        .mainpricingbox {
+          margin: 20px;
+        }
+        .pricingbox button {
+          margin-left: -20px;
+        }
+        #pricingheading {
+          margin-top: 30px;
+        }
+        .footer {
+          font-size: 15px;
+        }
+        .footer i {
+          padding: 4px;
+        }
+        header {
+          justify-content: space-between;
+          border: 2px solid;
+        }
+      
+        .mobile {
+          position: absolute;
+          display: none;
+          /* display: flex; */
+          flex-direction: column;
+          background-color: white;
+          height: 200px;
+          top: 30px;
+          right: 0px;
+
+          
+        }
+        .menus:focus~.mobile,.mobile:hover{
+          display: flex;
+        }
+
+        .mobile a{
+          text-decoration: none;
+          display: flex;
+          color: #80828e;
+          padding-top: 10px;
+
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div><span> APP </span> STARTER</div>
+      <span class="menus" tabindex="0">
+        <i class="fa-solid fa-bars" ></i>
+      </span>
+      <nav class="nav">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SCREENSHOTS</a>
+        <a href="#">PRICING</a>
+        <a href="#">NEWSLETTER</a>
+        <a href="#">CONTACT</a>
+      </nav>
+      <div class="mobile">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SCREENSHOTS</a>
+        <a href="#">PRICING</a>
+        <a href="#">NEWSLETTER</a>
+        <a href="#">CONTACT</a>
+      </div>
+    </header>
+    <main>
+      <section class="section1">
+        <div class="bgcolor"></div>
+        <div class="phone">
+          <img src="home-img.png" alt="" />
+          <div class="appstarter">
+            <span class="heading"> APP Starter page</span>
+
+            <span class="para">
+              The optimal way to present your beautiful mobile app for your
+              startup team. Let us create amazing things!
+            </span>
+            <button style="width: 150px; height: 50px">DOWNLOAD APP</button>
+          </div>
+        </div>
+      </section>
+      <section class="section2">
+        <div class="Welcome">
+          <span>Welcome to new app</span>
+          <span>_____</span>
+        </div>
+        <div class="main">
+          <div class="maincontainer">
+            <div class="main1">Our MOBILE APP Team</div>
+            <div class="main2">
+              APP Starter Page is provised by templatemo that can be used for
+              any site
+            </div>
+            <div class="main3">
+              <p>
+                This is a responsive
+                <span style="color: #3b3e7c; font-size: 15px"
+                  >HTML CSS template</span
+                >
+                designed for your mobile app pages. You can modify and use to it
+                your needs.
+              </p>
+            </div>
+          </div>
+
+          <div class="mainimg1">
+            <span
+              style="
+                margin-top: 130px;
+                padding-left: 50px;
+                color: #3b3e7c;
+                font-weight: 900px;
+              "
+              >SANDAR</span
+            >
+            <span>UI DESIGNER</span>
+          </div>
+
+          <div class="mainimg2">
+            <span
+              style="
+                margin-top: 130px;
+                padding-left: 60px;
+                color: #3b3e7c;
+                font-weight: 900px;
+              "
+              >CANDY</span
+            >
+            <span>UX SPECIALIST</span>
+          </div>
+        </div>
+      </section>
+      <section class="section3">
+        <p>
+          Praesent cempor nec orci eu condimentum. Vestibulum varius Lorem sed
+          ODIO Lacinia, ut efficitur Lorem ipsum dolor sit amet consectetur,
+          adipisicing elit. Et eveniet magnam, non neque, nam quos quae
+          excepturi iusto accusantium NISI, Sit amet accumsan ipsum elementum
+          quiS. Mauris ac sem mi.
+        </p>
+        <button>LEARN MORE</button>
+      </section>
+      <section class="section4">
+        <div class="screenshots2">
+          <div class="appheading">
+            <h1>APP SCREENSHOTS</h1>
+            <p>
+              Nulla nis purus, ultrices et scelerisque at, ullamcorper et ex.
+              Phasellus at nisi lobortis, semper tortor sed, gravida neque.
+            </p>
+          </div>
+          <div>
+            <img src="screenshot-img1.jpg" alt="" />
+            <img src="screenshot-img3.jpg" alt="" />
+            <img src="screenshot-img2.jpg" alt="" />
+          </div>
+        </div>
+        <!-- ..................................bootstrap.................... -->
+        <div id="carouselExampleIndicators" class="carousel slide">
+          <div class="screenshots">
+            <h1>APP SCREENSHOTS</h1>
+            <p>
+              Nulla nis purus, ultrices et scelerisque at, ullamcorper et ex.
+              Phasellus at nisi lobortis, semper tortor sed, gravida neque.
+            </p>
+          </div>
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleIndicators"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item sssimg">
+              <img src="screenshot-img1.jpg" class=" " alt="..." />
+              <img src="screenshot-img2.jpg" class="" alt="..." />
+              <img src="screenshot-img3.jpg" class="sssimg2" alt="..." />
+            </div>
+            <div class="carousel-item active sssimg">
+              <img src="screenshot-img4.jpg" class="" alt="..." />
+              <img src="screenshot-img5.jpg" class="" alt="..." />
+              <img src="screenshot-img6.jpg" class="sssimg2" alt="..." />
+            </div>
+            <div class="carousel-item sssimg">
+              <img src="screenshot-img7.jpg" class="" alt="..." />
+              <img src="screenshot-img8.jpg" class="" alt="..." />
+              <img src="screenshot-img8.jpg" class="sssimg2" alt="..." />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        <!-- <div class="ssimg">
+              <img src="screenshot-img5.jpg" alt="" />
+          <img src="screenshot-img6.jpg" alt="" />
+          <img src="screenshot-img7.jpg" alt="" />
+          <img src="screenshot-img8.jpg" alt="" />
+        </div> -->
+      </section>
+      <section class="section5">
+        <div class="pricing">
+          <span id="pricingheading">APP PRICING</span>
+          <span>______</span>
+        </div>
+
+        <div class="mainpricingbox">
+          <div class="pricingbox">
+            <div>
+              <span class="price">$60</span>
+            </div>
+            <div class="uses">
+              <span style="color: #545ad4; font-weight: 800">STATER</span>
+              <span>40 Users</span>
+              <span>10GB per user</span>
+              <span>Unlimited Support</span>
+              <span>1 year License</span>
+            </div>
+            <button>REGISTER NOW</button>
+          </div>
+
+          <div class="pricingbox">
+            <div>
+              <span class="price">$120</span>
+            </div>
+            <div class="uses">
+              <span style="color: #545ad4; font-weight: 800">BUSINESS</span>
+              <span>100 Users</span>
+              <span>20GB per user</span>
+              <span>Unlimited Support</span>
+              <span>2 year License</span>
+            </div>
+            <button>REGISTER NOW</button>
+          </div>
+
+          <div class="pricingbox">
+            <div>
+              <span class="price">$200</span>
+            </div>
+            <div class="uses">
+              <span style="color: #545ad4; font-weight: 800">ADVANCED</span>
+              <span>200 Users</span>
+              <span>30GB per user</span>
+              <span>Unlimited Support</span>
+              <span>3 year License</span>
+            </div>
+            <button>REGISTER NOW</button>
+          </div>
+        </div>
+      </section>
+      <section class="section6">
+        <div class="bgcolor6"></div>
+        <div class="text">
+          <div id="subscribe">Subscribe Newsletter</div>
+          <div id="para">
+            Maecenas orci sem, mollis quis risus a, veneratis condimentum felis.
+            Integer ut bibendum ipsum. Etiam a tristique sapien, ut cictum
+            augue.
+          </div>
+          <div class="input">
+            <input type="email" placeholder="Your emailhere" />
+            <button>SEND NEWSLETTER</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <span
+        >Copyright © 2016 Your App Starter || Design:
+        <span style="color: #545ad4; font-weight: 700">Templatemo </span></span
+      >
+      <div class="logos">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-google-plus-g"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    </footer>
+  </body>
+</html>
