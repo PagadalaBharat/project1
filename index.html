@@ -470,6 +470,7 @@
         .section1 {
           position: relative;
           width: 100%;
+    
           background-size: cover;
         }
         .phone img {
@@ -495,10 +496,10 @@
 
           /* background-color: #3b3e7c; */
         }
-        .appstarter .heading {
-          /* background-color: #1dc9e3; */
-          margin-top: 100px;
-        }
+         /* .appstarter .heading {
+          /* background-color: #1dc9e3;
+           margin-top: 100px; 
+        } */
 
         .Welcome {
           font-size: 12px;
@@ -512,22 +513,37 @@
         }
         .main {
           height: 20vh;
-          width: 90vh;
+          width: 90vw;
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           padding-top: 53%;
+          
+          margin-left: auto;
+          margin-right: auto;
         }
         .main1,
         .main2,
         .main3 {
           font-size: 80%;
         }
+        .mainimg12{
+          
+          width: 90%;
+          height: 60vh;
+          margin-left: auto;
+          margin-right: auto;
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+        }
         .mainimg1 {
-          width: 30%;
+          width: 40%;
+          height: 80%;
         }
         .mainimg1 span {
+          font-size: 16px;
           color: #3b3e7c;
           font-weight: 400;
           padding-left: 0px !important;
@@ -536,11 +552,12 @@
           color: #3b3e7c;
           font-weight: 400;
           padding-left: 0px !important;
-          font-size: 18px;
+          font-size: 16px;
           height: 35px;
         }
         .mainimg2 {
-          width: 30%;
+          width: 40%;
+          height: 80%;
         }
         .section3 {
           height: auto;
@@ -549,6 +566,9 @@
         .section3 p {
           width: 90%;
           font-size: 18px;
+        }
+        .section4{
+          height: 180vh;
         }
 
         .section4 .sssimg {
@@ -576,7 +596,15 @@
           flex-direction: column;
           justify-content: center;
           align-items: center;
+          height: 100%;
           gap: 20px;
+        }
+        .sc{
+          width: 100%;
+          display: flex;
+          flex-direction:column ;
+          align-items: center;
+          gap:20px;
         }
         .screenshots2 img {
           width: 150px;
@@ -605,16 +633,22 @@
           width: 100%;
         }
         .section5 {
-          height: 160vh;
+          height: 180vh;
+          gap: 0;
+        }
+        .pricing{
+          height: 10%;
+          
         }
         .mainpricingbox {
+          
+          height: 90%;
           display: flex;
           flex-direction: column;
-          margin-top: 50%;
-          gap: 10%;
+          gap: 5%;
         }
         .pricingbox {
-          height: 100%;
+          height: 25%;
         }
         .pricingbox button {
           margin-left: 0px;
@@ -719,14 +753,14 @@
               </p>
             </div>
           </div>
-
+          <div class="mainimg12">
           <div class="mainimg1">
             <span
               style="
                 margin-top: 130px;
                 padding-left: 50px;
                 color: #3b3e7c;
-                font-weight: 900px;
+                font-weight: 900;
               "
               >SANDAR</span
             >
@@ -739,12 +773,14 @@
                 margin-top: 130px;
                 padding-left: 60px;
                 color: #3b3e7c;
-                font-weight: 900px;
+                font-weight: 900;
               "
               >CANDY</span
             >
             <span>UX SPECIALIST</span>
           </div>
+        </div>
+
         </div>
       </section>
       <section class="section3">
@@ -766,7 +802,7 @@
               Phasellus at nisi lobortis, semper tortor sed, gravida neque.
             </p>
           </div>
-          <div>
+          <div class="sc">
             <img src="screenshot-img1.jpg" alt="" />
             <img src="screenshot-img3.jpg" alt="" />
             <img src="screenshot-img2.jpg" alt="" />
