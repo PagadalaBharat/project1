@@ -183,11 +183,18 @@
         /* display: flex;
             flex-direction: row; */
       }
+      .mainimg12{
+        display: flex;
+      width: 35%;
+        
+        
+        /* background-color: #3b3e7c; */
+      }
       .mainimg1 {
         background-image: url("team-img1.jpg");
         background-position: center;
         background-size: cover;
-        width: 14%;
+        width: 54%;
       }
       .mainimg1 span {
         background-color: rgba(255, 255, 255, 0.5);
@@ -195,6 +202,7 @@
         font-size: 20px;
         display: block;
         padding: 5px;
+      
         padding-left: 30px;
         /* margin-bottom: ; */
       }
@@ -202,7 +210,8 @@
         background-image: url("team-img2.jpg");
         background-position: center;
         background-size: cover;
-        width: 14%;
+        width: 54%;
+        margin-left: 20px;
       }
       .mainimg2 span {
         background-color: rgba(255, 255, 255, 0.5);
@@ -510,6 +519,7 @@
         .maincontainer {
           width: 70%;
           font-size: 20px;
+          margin-top: 20%;
         }
         .main {
           height: 20vh;
@@ -656,6 +666,9 @@
         #pricingheading {
           margin-top: 30px;
         }
+        .welcome .line{
+          display: none;
+        }
         .footer {
           font-size: 15px;
         }
@@ -699,23 +712,23 @@
       </span>
       <nav class="nav">
         <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">SCREENSHOTS</a>
-        <a href="#">PRICING</a>
-        <a href="#">NEWSLETTER</a>
-        <a href="#">CONTACT</a>
+        <a href="#about">ABOUT</a>
+        <a href="#screenshot">SCREENSHOTS</a>
+        <a href="#pricing">PRICING</a>
+        <a href="#newsletter">NEWSLETTER</a>
+        <a href="#contact">CONTACT</a>
       </nav>
       <div class="mobile">
         <a href="#">HOME</a>
-        <a href="#">ABOUT</a>
-        <a href="#">SCREENSHOTS</a>
-        <a href="#">PRICING</a>
-        <a href="#">NEWSLETTER</a>
-        <a href="#">CONTACT</a>
+        <a href="#about">ABOUT</a>
+        <a href="#screenshot">SCREENSHOTS</a>
+        <a href="#pricing">PRICING</a>
+        <a href="#newsletter">NEWSLETTER</a>
+        <a href="#contact">CONTACT</a>
       </div>
     </header>
     <main>
-      <section class="section1">
+      <section class="section1" id="home">
         <div class="bgcolor"></div>
         <div class="phone">
           <img src="home-img.png" alt="" />
@@ -730,10 +743,10 @@
           </div>
         </div>
       </section>
-      <section class="section2">
+      <section class="section2" id="about">
         <div class="Welcome">
           <span>Welcome to new app</span>
-          <span>_____</span>
+          <span class="line">_____</span>
         </div>
         <div class="main">
           <div class="maincontainer">
@@ -757,27 +770,29 @@
           <div class="mainimg1">
             <span
               style="
-                margin-top: 130px;
+                margin-top: 160px;
                 padding-left: 50px;
                 color: #3b3e7c;
                 font-weight: 900;
               "
               >SANDAR</span
             >
+            <!-- <span>SANDAR</span> -->
             <span>UI DESIGNER</span>
           </div>
 
           <div class="mainimg2">
             <span
               style="
-                margin-top: 130px;
+                margin-top: 160px;
                 padding-left: 60px;
                 color: #3b3e7c;
                 font-weight: 900;
               "
               >CANDY</span
             >
-            <span>UX SPECIALIST</span>
+            <!-- <span>CANDY</span> -->
+            <span>UX-SPECIALIST</span>
           </div>
         </div>
 
@@ -793,7 +808,7 @@
         </p>
         <button>LEARN MORE</button>
       </section>
-      <section class="section4">
+      <section class="section4" id="screenshot">
         <div class="screenshots2">
           <div class="appheading">
             <h1>APP SCREENSHOTS</h1>
@@ -882,10 +897,10 @@
           <img src="screenshot-img8.jpg" alt="" />
         </div> -->
       </section>
-      <section class="section5">
+      <section class="section5" id="pricing">
         <div class="pricing">
           <span id="pricingheading">APP PRICING</span>
-          <span>______</span>
+          <span class="line">______</span>
         </div>
 
         <div class="mainpricingbox">
@@ -932,7 +947,7 @@
           </div>
         </div>
       </section>
-      <section class="section6">
+      <section class="section6" id="newsletter">
         <div class="bgcolor6"></div>
         <div class="text">
           <div id="subscribe">Subscribe Newsletter</div>
@@ -948,7 +963,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contact">
       <span
         >Copyright © 2016 Your App Starter || Design:
         <span style="color: #545ad4; font-weight: 700">Templatemo </span></span
